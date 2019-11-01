@@ -1,0 +1,20 @@
+name: 'Build and deploy docker image to ECR'
+description: 'Build and deploy docker image to ECR'
+inputs:
+  image:
+    description: 'Docker image'
+    required: true
+  tag:
+    description: 'Docker image tag (Defaults to latest)'
+    required: false
+    default: 'latest'
+  registry:
+    description: 'Target Docker registry'
+    required: true
+  dockerfile:
+    description: 'Location of Dockerfile (Defaults to Dockerfile in root directory)'
+    required: false
+    default: 'Dockerfile'
+runs:
+  using: 'node12'
+  main: 'dist/index.js'

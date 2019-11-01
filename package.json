@@ -1,0 +1,19 @@
+{
+  "name": "github-action-deploy-docker-to-aws-ecr",
+  "version": "1.0.0",
+  "description": "Github Action to build and deploy a docker image to ECR",
+  "main": "index.js",
+  "scripts": {
+    "build": "ncc build src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@actions/core": "^1.2.0",
+    "@actions/github": "^1.1.0"
+  },
+  "devDependencies": {
+    "@zeit/ncc": "^0.20.5"
+  }
+}
